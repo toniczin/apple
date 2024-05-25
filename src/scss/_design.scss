@@ -1,0 +1,267 @@
+.section-design {
+  background-color: var(--section-bg-color);
+  padding: 20rem 0 27rem;
+}
+
+.design {
+  &-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &-header {
+    max-width: 1260px;
+    width: calc(100% - 9rem);
+    margin: 0 auto;
+  }
+  &-title {
+    color: var(--section-headline-text-color);
+    font-size: 5.6rem;
+    letter-spacing: 0.2px;
+    font-family: $appleDisplay;
+  }
+
+  &-contents {
+    max-width: 1260px;
+    padding-top: 20rem;
+    margin: 0 auto;
+  }
+  &-desc {
+    max-width: 1050px;
+    margin: 0 auto;
+    &__text {
+      width: 98rem;
+      margin: 0 auto;
+      color: #f5f5f7;
+      font-size: 8rem;
+      line-height: 1.05;
+      font-weight: bold;
+      letter-spacing: -1.2px;
+      font-family: $appleDisplay;
+    }
+  }
+
+  &-grid {
+    max-width: 1050px;
+    margin: 10rem auto 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 51.7rem 51.4rem;
+    grid-gap: 2rem;
+    gap: 2rem;
+    &__item {
+      overflow: hidden;
+      background-color: #000;
+      &.titanium {
+        grid-column: 1 / 3;
+      }
+      &.lightest {
+        display: flex;
+        justify-content: flex-end;
+        .design-grid__picture {
+          display: block;
+          width: 48.2rem;
+          height: 51.4rem;
+        }
+      }
+      &.durable {
+        display: flex;
+        align-items: center; 
+        .design-grid__picture {
+          display: block;
+          width: 51.4rem;
+          height: 34.2rem;
+        }
+      }
+    }
+    &__media {
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+      height: 100%;
+    }
+    &__video {
+      width: 105rem;
+      height: 43rem;
+    }
+    &__picture {
+    }
+    &__img {}
+  }
+
+  
+  &-typography {
+    width: 98rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto 0;
+    &-col {
+      max-width: 33%;
+      &__text {
+        font-size: 2.1rem;
+        color: #86868b;
+        line-height: 1.4;
+        font-weight: bold;
+        letter-spacing: 0.2px;
+        font-family: $appleDisplay;
+      }
+    }
+  }
+}
+
+@media (max-width: 1068px) {
+  .section-design {
+    padding: 14rem 0 21rem;
+  }
+
+  .design {
+    &-container {
+    }
+
+    &-header {
+      max-width: 932px;
+      width: calc(100% - 4.4rem);
+    }
+    &-title {
+      font-size: 4.8rem;
+    }
+
+    &-contents {
+      max-width: 932px;
+      padding-top: 14rem;
+    }
+    &-desc {
+      max-width: 766px;
+      &__text {
+        width: 69.2rem;
+        font-size: 6.4rem;
+        letter-spacing: -0.6px;
+        line-height: 1.0625;
+      }
+    }
+
+    &-grid {
+        max-width: 766px;
+        margin: 7rem auto 5rem;
+        grid-template-rows: 44.5rem 37.2rem;
+      &__item {
+        &.titanium {
+        }
+        &.lightest {
+          .design-grid__picture {
+            width: 37.4rem;
+            height: 37.2rem;
+          }
+        }
+        &.durable {
+          .design-grid__picture {
+            width: 37.2rem;
+            height: 24.8rem;
+          }
+        }
+      }
+      &__media {
+      }
+      &__video {
+        object-fit: cover;
+        width: 76.6rem;
+        height: 36.4rem;
+      }
+      &__picture {
+      }
+      &__img {}
+    }
+
+    
+    &-typography {
+      width: 69.2rem;
+      &-col {
+        max-width: 39%;
+        &__text {
+          strong {}
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 734px) {
+  .section-design {
+    padding: 10rem 0 20.6rem;
+  }
+
+  .design {
+    &-container {
+    }
+
+    &-header {
+      width: 87.5%;
+    }
+    &-title {
+      font-size: 3.2rem;
+    }
+
+    &-contents {
+      padding-top: 10rem;
+    }
+    &-desc {
+      max-width: 280px;
+      &__text {
+        max-width: 280px;
+        font-size: 4rem;
+        letter-spacing: -0.9px;
+      }
+    }
+
+    &-grid {
+      grid-template-rows: 46rem 46rem 46rem;
+      max-width: 460px;
+      grid-template-columns: 100%;
+      width: 100%;
+      &__item {
+        &.titanium {
+          grid-column: auto;
+        }
+        &.lightest {
+          .design-grid__picture {
+            width: 46rem;
+            height: 46rem;
+          }
+        }
+        &.durable {
+          .design-grid__picture {
+            width: 46rem;
+            height: 28rem;
+          }
+        }
+      }
+      &__media {
+      }
+      &__video {
+        width: 46rem;
+        height: 34.6rem;
+      }
+      &__picture {
+      }
+      &__img {}
+    }
+
+    
+    &-typography {
+      width: 28rem;
+      flex-direction: column;
+      align-items: center;
+      &-col {
+        max-width: 280px;
+        &:last-child {
+          margin-top: 1.4rem;
+        }
+        &__text {
+          font-size: 1.9rem;
+          strong {}
+        }
+      }
+    }
+  }
+}

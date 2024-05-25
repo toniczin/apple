@@ -1,0 +1,33 @@
+:root {
+  --vh: 100%;
+  --section-link-color: #2997FF;
+
+  --section-bg-color-dark: #000;
+  --section-bg-color: #101010;
+  --section-headline-text-color: #86868b;
+  --section-desc-text-color: #F5F5F7;
+
+  --nav-background-color: #000;
+  --nav-text-color: rgba(255, 255, 255, 0.8);
+
+  --highlights-indicator-bg-color: rgba(66, 66, 69, 0.8);
+  --highlights-inactive-fill-color: rgba(245, 245, 247, 0.8);
+  --highlights-active-fill-color: #f5f5f7;
+
+  --action-pin-opacity: 0;
+  --action-pin-bar-per: 70%;
+
+  --ecosystem-height: 0px;
+  --ecosystem-contents-bg-color: #000;
+  --ecosystem-title-text-color: #F5F5F7;
+  --ecosystem-text-color: #86868b;
+
+  --footer-bg-color: #1D1D1F;
+  --footer-text-color: rgba(255, 255, 255, 0.56);
+  --footer-link-color: rgba(255, 255, 255, 0.8);
+  --footer-border-color: rgba(255, 255, 255, 0.24);
+  --footer-bar-color: rgba(255, 255, 255, 0.4);
+}
+
+$appleDisplay: 'SF Pro Display', 'SF Pro Icons', arial, '-apple-system', sans-serif;
+$appleText: 'SF Pro Text', 'SF Pro Icons', arial, '-apple-system', sans-serif;
