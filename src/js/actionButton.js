@@ -102,8 +102,6 @@ function actionButton() {
   // 스와이퍼 세팅
   function setSwiper() {
     if(isMobile) {
-      let currnetActiveIndex;
-      
       listWrap.classList.add('swiper');
       list.classList.add('swiper-wrapper');
       listItem.forEach(_ => _.classList.add('swiper-slide'));
@@ -112,14 +110,12 @@ function actionButton() {
         loop: false,
         slidesPerView: 'auto',
         speed: 400,
+        touchRatio: 2,
         // allowTouchMove: false,  // 모바일만 드래그 허용
         on: {
           reachBeginning: () => {
-            currnetActiveIndex = document.querySelector('.actionButton-list__link.active').parentElement.dataset.itemIndex;
-            if(currnetActiveIndex == 0) {
-              btnPrev.classList.add('hide');
-              btnNext.classList.remove('hide');
-            }
+            btnPrev.classList.add('hide');
+            btnNext.classList.remove('hide');
           },
           reachEnd: () => {
             btnNext.classList.add('hide');
