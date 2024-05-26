@@ -101,6 +101,9 @@ function highlights() {
           setTimeout(() => {
             currentSlide = e.slides[0];
             e.slides[0].querySelector('video').play().catch(e => {});
+
+            btns.forEach(_ => _.classList.remove('active'));
+            btnPause.classList.add('active');
           });
         },
         autoplayTimeLeft: function(e, timestamp, delta) {
