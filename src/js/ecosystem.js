@@ -33,14 +33,24 @@ function ecosystem() {
     sectionPadding = parseInt(paddingTop);
   }
 
+  // Card Tab 아코디언 높이 동적 지정
   function getAccordionHeight() {
     const column = document.querySelectorAll('.column');
-    const nodes = Array.from(column);
-    const accordionHeight = nodes.map(node => node.offsetHeight).reduce((acc, cur) => acc + cur);
+    const titleHeight = 66;
+
+    const desc = column[0].querySelector('.column-media-desc').offsetHeight;
+    const media = column[0].querySelector('.column-media');
+    const mediaTop = parseInt(getComputedStyle(media).marginTop);
+    const mediaBottom = parseInt(getComputedStyle(media).marginBottom);
+    const picture = column[0].querySelector('.column-media__picture').offsetHeight;
+    
+    const columnWatch = desc + mediaTop + mediaBottom + picture;
+    const accordionHeight = columnWatch + (titleHeight * column.length);
 
     document.documentElement.style.setProperty('--ecosystem-height', `${accordionHeight}px`);
   }
 
+  // Card Tab 아코디언 UI 핸들러
   function handleDropdownMenu(e) {
     if(e.currentTarget.tagName !== 'DIV') return;
 
